@@ -13,12 +13,7 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div>
-          <span className="hero__eyebrow">
-            <span className="dot" aria-hidden="true" />
-            AI-powered trading, built for Australia
-          </span>
-
-          <h1>Mirevuno AI Platform</h1>
+          <h1>Mirevuno AI - See the Market with Clarity</h1>
 
           <p className="hero__sub">
             A modern trading platform designed for Australians - uniting crypto and traditional
@@ -46,6 +41,15 @@ export default function Hero() {
         </div>
 
         <div className="hero__form">
+          <span className="hero-float hero-float--1 hero-float--rating" aria-hidden="true">
+            <Icon name="star" size={16} filled />
+            {RATING.score}/5 · {RATING.reviews} reviews
+          </span>
+          <span className="hero-float hero-float--2" aria-hidden="true">
+            <Icon name="shield" size={16} />
+            AU Verified · Secure sign-up
+          </span>
+
           <RegistrationForm
             idPrefix="hero"
             title="Create your free account"

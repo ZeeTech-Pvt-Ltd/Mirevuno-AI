@@ -43,6 +43,7 @@ export default function Contact() {
           idPrefix="contact"
           title="Get in touch"
           subtitle="Fill out the form with your details and our team will get back to you as quickly as possible."
+          payRow={false}
         />
       </div>
     </main>

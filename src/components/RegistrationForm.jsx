@@ -17,7 +17,7 @@ const initialFields = { firstName: '', lastName: '', email: '', consent: true }
  * - POSTs JSON {firstName, lastName, email, phone, offerName} with the
  *   phone in full international format
  */
-export default function RegistrationForm({ idPrefix = 'reg', title, subtitle }) {
+export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, payRow = true }) {
   const navigate = useNavigate()
   const [fields, setFields] = useState(initialFields)
   const [status, setStatus] = useState(STATUS.idle)
@@ -227,6 +227,38 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle }) 
           Your data is protected with 256-bit SSL encryption
         </p>
       </form>
+
+      {payRow && (
+        <div className="pay-row" aria-label="Accepted payment methods">
+        <span className="pay" title="VISA">
+          <svg width="44" height="14" viewBox="0 0 44 14" aria-hidden="true">
+            <text x="0" y="11" fontSize="13" fontWeight="800" fontStyle="italic" fill="#1a1f71">
+              VISA
+            </text>
+          </svg>
+        </span>
+        <span className="pay" title="Mastercard">
+          <svg width="30" height="19" viewBox="0 0 34 20" aria-hidden="true">
+            <circle cx="13" cy="10" r="9" fill="#eb001b" />
+            <circle cx="21" cy="10" r="9" fill="#f79e1b" fillOpacity="0.92" />
+          </svg>
+        </span>
+        <span className="pay" title="PayPal">
+          <svg width="52" height="14" viewBox="0 0 52 14" aria-hidden="true">
+            <text x="0" y="11" fontSize="13" fontWeight="800" fontStyle="italic" fill="#003087">
+              PayPal
+            </text>
+          </svg>
+        </span>
+        <span className="pay" title="Bank Transfer">
+          <svg width="20" height="17" viewBox="0 0 24 24" fill="none" stroke="#4a4564" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M3 9l9-6 9 6" />
+            <path d="M4 10v8M8 10v8M12 10v8M16 10v8M20 10v8" />
+            <path d="M2 20h20" />
+          </svg>
+        </span>
+        </div>
+      )}
     </div>
   )
 }

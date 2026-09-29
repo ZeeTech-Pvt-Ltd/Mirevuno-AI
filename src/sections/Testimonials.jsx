@@ -105,7 +105,7 @@ export default function Testimonials() {
             aria-label="Member testimonials"
             tabIndex={0}
           >
-            {TESTIMONIALS.map(({ name, location, initials, returnPct, quote }) => (
+            {TESTIMONIALS.map(({ name, location, avatar, returnPct, quote }) => (
               <article className="testimonial" key={name}>
                 <div className="testimonial__head">
                   <span className="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">
@@ -123,7 +123,7 @@ export default function Testimonials() {
 
                 <div className="testimonial__author">
                   <span className="testimonial__avatar" aria-hidden="true">
-                    {initials}
+                    <img src={avatar} alt="" width="44" height="44" loading="lazy" decoding="async" />
                   </span>
                   <div>
                     <div className="testimonial__name">{name}</div>

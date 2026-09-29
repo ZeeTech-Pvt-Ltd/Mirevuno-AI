@@ -134,7 +134,7 @@ export const TESTIMONIALS = [
   {
     name: 'Marcus D.',
     location: 'Sydney',
-    initials: 'MD',
+    avatar: '/assets/img/avatars/avatar-1.jpg',
     returnPct: '+17.9%',
     quote:
       'I walked in knowing nothing about markets. The platform held my hand through every step, and within weeks I had a routine I could rely on.',
@@ -142,7 +142,7 @@ export const TESTIMONIALS = [
   {
     name: 'Priya N.',
     location: 'Melbourne',
-    initials: 'PN',
+    avatar: '/assets/img/avatars/avatar-2.jpg',
     returnPct: '+16.4%',
     quote:
       'The interface feels more like my banking app than trading software. Funding, trading, withdrawing - all of it simply works.',
@@ -150,7 +150,7 @@ export const TESTIMONIALS = [
   {
     name: 'Jack T.',
     location: 'Brisbane',
-    initials: 'JT',
+    avatar: '/assets/img/avatars/avatar-3.jpg',
     returnPct: '+18.7%',
     quote:
       'The AI engine keeps surfacing chances I would never spot myself. It works quietly in the background while I focus on my day job.',
@@ -158,7 +158,7 @@ export const TESTIMONIALS = [
   {
     name: 'Amelia S.',
     location: 'Perth',
-    initials: 'AS',
+    avatar: '/assets/img/avatars/avatar-4.jpg',
     returnPct: '+15.1%',
     quote:
       'Transparency won me over. Every fee is shown before I commit, and when I call support, a real person picks up.',
@@ -166,7 +166,7 @@ export const TESTIMONIALS = [
   {
     name: 'Noah K.',
     location: 'Adelaide',
-    initials: 'NK',
+    avatar: '/assets/img/avatars/avatar-5.jpg',
     returnPct: '+17.2%',
     quote:
       'I started with the minimum deposit just to dip a toe in. Six months on, it has become a steady part of my month.',
@@ -174,7 +174,7 @@ export const TESTIMONIALS = [
   {
     name: 'Isabella F.',
     location: 'Gold Coast',
-    initials: 'IF',
+    avatar: '/assets/img/avatars/avatar-6.jpg',
     returnPct: '+16.9%',
     quote:
       'Round-the-clock access suits my life perfectly. I check my phone over morning coffee and let automation handle the rest.',

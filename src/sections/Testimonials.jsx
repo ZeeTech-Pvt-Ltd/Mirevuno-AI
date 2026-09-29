@@ -7,6 +7,11 @@ const AUTOPLAY_MS = 5000
 
 export default function Testimonials() {
   const trackRef = useRef(null)
+  // Geometry is measured once per ResizeObserver callback (post-layout) and
+  // cached here so autoplay ticks and scroll handlers never read layout
+  // properties after React re-renders - avoiding forced reflows.
+  const stepRef = useRef(null) // card width + gap
+  const maxRef = useRef(0) // max scroll offset
   const [page, setPage] = useState(0)
   const [pages, setPages] = useState(1)
   const [perView, setPerView] = useState(1)
@@ -21,6 +26,8 @@ export default function Testimonials() {
       const card = track.querySelector('.testimonial')
       if (!card) return
       const step = card.getBoundingClientRect().width + GAP
+      stepRef.current = step
+      maxRef.current = track.scrollWidth - track.clientWidth
       const visible = Math.max(1, Math.round(track.clientWidth / step))
       setPerView(visible)
       setPages(Math.ceil(TESTIMONIALS.length / visible))
@@ -36,9 +43,8 @@ export default function Testimonials() {
     const track = trackRef.current
     if (!track) return
     const onScroll = () => {
-      const card = track.querySelector('.testimonial')
-      if (!card) return
-      const step = card.getBoundingClientRect().width + GAP
+      const step = stepRef.current
+      if (!step) return
       const i = Math.round(track.scrollLeft / (step * perView))
       setPage(Math.min(Math.max(0, i), pages - 1))
     }
@@ -52,10 +58,9 @@ export default function Testimonials() {
     const id = setInterval(() => {
       const track = trackRef.current
       if (!track) return
-      const card = track.querySelector('.testimonial')
-      if (!card) return
-      const step = card.getBoundingClientRect().width + GAP
-      const maxScroll = track.scrollWidth - track.clientWidth
+      const step = stepRef.current
+      if (!step) return
+      const maxScroll = maxRef.current
       const atEnd = track.scrollLeft >= maxScroll - 4
       const next = atEnd ? 0 : Math.min(track.scrollLeft + step * perView, maxScroll)
       track.scrollTo({ left: next, behavior: 'smooth' })
@@ -66,10 +71,9 @@ export default function Testimonials() {
   const goTo = (index) => {
     const track = trackRef.current
     if (!track) return
-    const card = track.querySelector('.testimonial')
-    if (!card) return
-    const step = card.getBoundingClientRect().width + GAP
-    const maxScroll = track.scrollWidth - track.clientWidth
+    const step = stepRef.current
+    if (!step) return
+    const maxScroll = maxRef.current
     const target = Math.min(Math.max(0, index), pages - 1)
     const left = target === pages - 1 ? maxScroll : target * step * perView
     track.scrollTo({ left, behavior: 'smooth' })

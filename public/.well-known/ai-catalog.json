@@ -6,18 +6,27 @@
   },
   "entries": [
     {
-      "identifier": "urn:ai:mirevuno-ai.com:website:platform",
+      "identifier": "urn:air:mirevuno-ai.com:platform:agent-card",
       "displayName": "Mirevuno AI Platform",
-      "type": "text/html",
-      "url": "https://mirevuno-ai.com/",
-      "description": "AI-powered online trading platform for Australians - crypto, forex, equities, commodities and CFDs with automated market analysis, bank-grade security and 24/7 access."
+      "type": "application/agent-card+json",
+      "url": "https://mirevuno-ai.com/agent-card.json",
+      "description": "AI-powered online trading platform for Australians - crypto, forex, equities, commodities and CFDs with automated market analysis, bank-grade security and 24/7 access.",
+      "representativeQueries": [
+        "What is Mirevuno AI?",
+        "How do I start trading with Mirevuno AI?",
+        "Is Mirevuno AI safe to use?"
+      ]
     },
     {
-      "identifier": "urn:ai:mirevuno-ai.com:knowledge:llms-txt",
+      "identifier": "urn:air:mirevuno-ai.com:knowledge:llms-txt",
       "displayName": "Mirevuno AI llms.txt",
-      "type": "text/markdown",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
       "url": "https://mirevuno-ai.com/llms.txt",
-      "description": "Site guide for language models: page structure, key facts, supported markets, security measures and support contact details."
+      "description": "Site guide for language models: page structure, key facts, supported markets, security measures and support contact details.",
+      "representativeQueries": [
+        "What pages does the Mirevuno AI website have?",
+        "What are the key facts about Mirevuno AI?"
+      ]
     }
   ]
 }

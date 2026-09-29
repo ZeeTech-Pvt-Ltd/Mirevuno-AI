@@ -1,0 +1,9 @@
+{
+  "name": "Mirevuno AI Platform",
+  "description": "AI-powered online trading platform for Australians - crypto, forex, equities, commodities and CFDs with automated market analysis, bank-grade security and 24/7 access.",
+  "url": "https://mirevuno-ai.com/",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false
+  }
+}

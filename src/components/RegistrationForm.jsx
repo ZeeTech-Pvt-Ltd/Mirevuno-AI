@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import 'intl-tel-input/styles'
 import Icon from './Icon'
 import { FORM_ENDPOINT, OFFER_NAME } from '../data/content'
 
@@ -25,50 +24,60 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
   const honeypotRef = useRef(null)
   const phoneInputRef = useRef(null)
   const itiRef = useRef(null)
+  const itiPromiseRef = useRef(null)
 
-  // Code-split: intl-tel-input (with its utils) loads on demand via a
-  // dynamic import, so it stays out of the initial JS bundle while the
-  // flag + country code still appear as soon as the page renders.
-  useEffect(() => {
-    if (!phoneInputRef.current) return
-    let cancelled = false
-    let iti = null
-    import('intl-tel-input/intlTelInputWithUtils').then(({ default: intlTelInput }) => {
-      if (cancelled || !phoneInputRef.current) return
-      iti = intlTelInput(phoneInputRef.current, {
-        initialCountry: '', // auto-detect via the lookup below
-        separateDialCode: true,
-        placeholderNumberPolicy: 'AGGRESSIVE', // country-specific example placeholder
-        placeholderNumberType: 'MOBILE',
-        // Detect the user's country from their IP. AU is only the fallback.
-        // ipwho.is first (CORS-friendly, works on localhost); ipapi.co as
-        // backup for when the first service is unavailable.
-        initialCountryLookup: () =>
-          fetch('https://ipwho.is/')
-            .then((r) => r.json())
-            .then((d) => (d && d.success && d.country_code) || '')
-            .catch(() => '')
-            .then((code) => {
-              if (code) return code
-              return fetch('https://ipapi.co/json/')
-                .then((r) => r.json())
-                .then((d) => d.country_code || 'au')
-                .catch(() => 'au')
-            }),
+  // intl-tel-input (JS + styles, including the ~87KB flag sprite) loads
+  // only when the user first interacts with the phone field - keeping it
+  // entirely off the initial page load on mobile.
+  const ensureIti = () => {
+    if (!itiPromiseRef.current) {
+      itiPromiseRef.current = Promise.all([
+        import('intl-tel-input/styles'),
+        import('intl-tel-input/intlTelInputWithUtils'),
+      ]).then(([, { default: intlTelInput }]) => {
+        if (!phoneInputRef.current) return null
+        const iti = intlTelInput(phoneInputRef.current, {
+          initialCountry: '', // auto-detect via the lookup below
+          separateDialCode: true,
+          placeholderNumberPolicy: 'AGGRESSIVE', // country-specific example placeholder
+          placeholderNumberType: 'MOBILE',
+          // Detect the user's country from their IP. AU is only the fallback.
+          // ipwho.is first (CORS-friendly, works on localhost); ipapi.co as
+          // backup for when the first service is unavailable.
+          initialCountryLookup: () =>
+            fetch('https://ipwho.is/')
+              .then((r) => r.json())
+              .then((d) => (d && d.success && d.country_code) || '')
+              .catch(() => '')
+              .then((code) => {
+                if (code) return code
+                return fetch('https://ipapi.co/json/')
+                  .then((r) => r.json())
+                  .then((d) => d.country_code || 'au')
+                  .catch(() => 'au')
+              }),
+        })
+        itiRef.current = iti
+        // Order the country selector as: flag → dial code → dropdown arrow.
+        const container = phoneInputRef.current.closest('.iti')
+        const arrow = container?.querySelector('.iti__arrow')
+        const selectedCountry = container?.querySelector('.iti__selected-country')
+        if (arrow && selectedCountry) selectedCountry.appendChild(arrow)
+        // Hide the static AU prefix now that the picker is active.
+        phoneInputRef.current.closest('.phone-iti')?.classList.add('iti-ready')
+        return iti
       })
-      itiRef.current = iti
-      // Order the country selector as: flag → dial code → dropdown arrow.
-      const container = phoneInputRef.current.closest('.iti')
-      const arrow = container?.querySelector('.iti__arrow')
-      const selectedCountry = container?.querySelector('.iti__selected-country')
-      if (arrow && selectedCountry) selectedCountry.appendChild(arrow)
-    })
-    return () => {
-      cancelled = true
-      iti?.destroy()
-      itiRef.current = null
     }
-  }, [])
+    return itiPromiseRef.current
+  }
+
+  useEffect(
+    () => () => {
+      itiPromiseRef.current?.then((iti) => iti?.destroy())
+      itiRef.current = null
+    },
+    [],
+  )
 
   const setField = (name) => (e) =>
     setFields((f) => ({
@@ -82,7 +91,8 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
     if (honeypotRef.current?.value) return
 
     // Phone condition: must be a valid number for the selected country.
-    const iti = itiRef.current
+    // ensureIti() lazily initialises the phone field on first submit.
+    const iti = await ensureIti()
     const phone = iti?.getNumber()
     if (!phone || !iti?.isValidNumber()) {
       setPhoneError('Please enter a valid phone number')
@@ -186,6 +196,12 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
         <div className="contact-form__field">
           <span>Phone Number *</span>
           <div className="phone-iti">
+            {/* Static prefix shown before the country picker loads; replaced
+                by intl-tel-input's own flag + dial code once it initialises. */}
+            <span className="phone-prefix-static" aria-hidden="true">
+              <img src="/assets/img/flag-au.png" alt="" width="20" height="15" />
+              +61
+            </span>
             <input
               ref={phoneInputRef}
               id={`${idPrefix}-phone`}
@@ -193,6 +209,8 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
               name="phone"
               autoComplete="tel"
               aria-label="Phone number"
+              placeholder="Phone number"
+              onFocus={ensureIti}
               required
             />
           </div>

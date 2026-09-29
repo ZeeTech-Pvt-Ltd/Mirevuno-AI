@@ -1719,7 +1719,32 @@ input {
 /* ---------- intl-tel-input phone field (light, v29 markup) ---------- */
 
 .phone-iti {
+  position: relative;
   width: 100%;
+}
+
+/* Static flag + dial code shown before the country picker lazy-loads */
+.phone-prefix-static {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.phone-iti > input {
+  padding-left: 100px;
+}
+
+.phone-iti.iti-ready .phone-prefix-static {
+  display: none;
 }
 
 .phone-iti .iti {

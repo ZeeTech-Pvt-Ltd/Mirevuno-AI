@@ -602,6 +602,13 @@ input {
 
   .hero--split .hero__points {
     justify-content: center;
+    /* Pills stay on one line when they fit and wrap when they don't,
+       so the row can never push the column past the viewport. */
+    flex-wrap: wrap;
+  }
+
+  .hero--split .hero__inner > div {
+    min-width: 0;
   }
 
   .hero--split .rating {
@@ -609,7 +616,7 @@ input {
   }
 
   .hero--split .hero__form {
-    margin-top: 44px;
+    margin-top: 12px;
     margin-inline: auto;
     max-width: 620px;
   }
@@ -2318,11 +2325,6 @@ html.js [data-reveal-grid] > [data-reveal]:nth-child(n + 7) {
 /* ---------- Narrow phones (≤480px) ---------- */
 
 @media (max-width: 480px) {
-  /* Pills only wrap on very narrow phones so they never overflow */
-  .hero__points {
-    flex-wrap: wrap;
-  }
-
   .logo {
     font-size: 16px;
     gap: 8px;

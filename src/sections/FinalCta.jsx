@@ -1,7 +1,4 @@
-import Icon from '../components/Icon'
-import RegistrationForm from '../components/RegistrationForm'
-
-const POINTS = ['Free account in minutes', 'No experience needed']
+import { Link } from 'react-router-dom'
 
 // Closing conversion panel on the violet gradient, above the footer.
 export default function FinalCta() {
@@ -18,17 +15,15 @@ export default function FinalCta() {
               minutes - no experience needed.
             </p>
 
-            <div className="cta-final__points">
-              {POINTS.map((point) => (
-                <span className="cta-final__point" key={point}>
-                  <Icon name="check" size={16} strokeWidth={2.5} />
-                  {point}
-                </span>
-              ))}
+            <div className="cta-final__actions">
+              <a className="btn btn--amber" href="#register">
+                Register
+              </a>
+              <Link to="/contact-us" className="btn btn--ghost-dark">
+                Contact Us
+              </Link>
             </div>
           </div>
-
-          <RegistrationForm idPrefix="final" title="Create your free account" />
         </div>
       </div>
     </section>

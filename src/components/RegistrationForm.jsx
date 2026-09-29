@@ -40,11 +40,21 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle }) 
         separateDialCode: true,
         placeholderNumberPolicy: 'AGGRESSIVE', // country-specific example placeholder
         placeholderNumberType: 'MOBILE',
+        // Detect the user's country from their IP. AU is only the fallback.
+        // ipwho.is first (CORS-friendly, works on localhost); ipapi.co as
+        // backup for when the first service is unavailable.
         initialCountryLookup: () =>
-          fetch('https://ipapi.co/json/')
+          fetch('https://ipwho.is/')
             .then((r) => r.json())
-            .then((d) => d.country_code || 'au')
-            .catch(() => 'au'),
+            .then((d) => (d && d.success && d.country_code) || '')
+            .catch(() => '')
+            .then((code) => {
+              if (code) return code
+              return fetch('https://ipapi.co/json/')
+                .then((r) => r.json())
+                .then((d) => d.country_code || 'au')
+                .catch(() => 'au')
+            }),
       })
       itiRef.current = iti
       // Order the country selector as: flag → dial code → dropdown arrow.

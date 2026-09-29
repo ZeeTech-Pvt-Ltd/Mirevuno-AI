@@ -94,11 +94,17 @@ export default function Testimonials() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="testimonials__track" ref={trackRef}>
+          <div
+            className="testimonials__track"
+            ref={trackRef}
+            role="region"
+            aria-label="Member testimonials"
+            tabIndex={0}
+          >
             {TESTIMONIALS.map(({ name, location, initials, returnPct, quote }) => (
               <article className="testimonial" key={name}>
                 <div className="testimonial__head">
-                  <span className="testimonial__stars" aria-label="5 star rating">
+                  <span className="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Icon key={i} name="star" size={16} filled />
                     ))}

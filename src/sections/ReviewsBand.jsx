@@ -10,7 +10,7 @@ export default function ReviewsBand() {
           <div className="band__inner">
             <h2>Loved by a growing community</h2>
 
-            <div className="band__rating" aria-label={`Rated ${RATING.score} out of 5 from ${RATING.reviews} reviews`}>
+            <div className="band__rating">
               <span className="rating__stars" aria-hidden="true">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Icon key={i} name="star" size={24} filled />

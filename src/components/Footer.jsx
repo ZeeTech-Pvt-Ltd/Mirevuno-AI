@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Logo from './Logo'
 import { BRAND, CONTACT_EMAIL } from '../data/content'
 
@@ -16,6 +16,21 @@ const LEGAL_LINKS = [
 ]
 
 export default function Footer() {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  // Scroll to the registration form; when navigating from another route,
+  // go home first and then scroll (mirrors the header's anchor handling).
+  const handleRegister = (e) => {
+    e.preventDefault()
+    if (pathname === '/') {
+      document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' }), 150)
+    }
+  }
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -33,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div className="site-footer__col">
-            <h4>Platform</h4>
+            <h2>Platform</h2>
             <ul>
               {PLATFORM_LINKS.map(({ label, to }) => (
                 <li key={to}>
@@ -44,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div className="site-footer__col">
-            <h4>Legal</h4>
+            <h2>Legal</h2>
             <ul>
               {LEGAL_LINKS.map(({ label, to }) => (
                 <li key={to}>
@@ -55,11 +70,11 @@ export default function Footer() {
           </div>
 
           <div className="site-footer__cta">
-            <h4>Get started</h4>
+            <h2>Get started</h2>
             <p>Open a free account and start trading with a minimum deposit of 347 A$.</p>
-            <Link to="/#register" className="btn btn--amber">
+            <a href="#register" className="btn btn--amber" onClick={handleRegister}>
               Register
-            </Link>
+            </a>
           </div>
         </div>
 

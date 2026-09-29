@@ -1,0 +1,23 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Mirevuno AI",
+    "identifier": "mirevuno-ai.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:mirevuno-ai.com:website:platform",
+      "displayName": "Mirevuno AI Platform",
+      "type": "text/html",
+      "url": "https://mirevuno-ai.com/",
+      "description": "AI-powered online trading platform for Australians - crypto, forex, equities, commodities and CFDs with automated market analysis, bank-grade security and 24/7 access."
+    },
+    {
+      "identifier": "urn:ai:mirevuno-ai.com:knowledge:llms-txt",
+      "displayName": "Mirevuno AI llms.txt",
+      "type": "text/markdown",
+      "url": "https://mirevuno-ai.com/llms.txt",
+      "description": "Site guide for language models: page structure, key facts, supported markets, security measures and support contact details."
+    }
+  ]
+}

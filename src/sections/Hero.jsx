@@ -34,11 +34,7 @@ export default function Hero() {
             ))}
           </div>
 
-          <div
-            className="rating"
-            style={{ marginTop: 26, color: 'var(--ink-muted)' }}
-            aria-label={`Rated ${RATING.score} out of 5 from ${RATING.reviews} reviews`}
-          >
+          <div className="rating" style={{ marginTop: 26, color: 'var(--ink-muted)' }}>
             <span className="rating__stars" aria-hidden="true">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Icon key={i} name="star" size={18} filled />

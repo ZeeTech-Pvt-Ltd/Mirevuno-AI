@@ -31,9 +31,6 @@ export default function Faqs() {
       <section className="hero faqs-hero">
         <div className="hero__blob hero__blob--1" aria-hidden="true" />
         <div className="hero__blob hero__blob--3" aria-hidden="true" />
-        <span className="ghost" aria-hidden="true">
-          FAQ
-        </span>
         <div className="container hero__inner" data-reveal>
           <div>
             <span className="hero__eyebrow">
@@ -53,7 +50,7 @@ export default function Faqs() {
             <div className="faqs-quick" data-reveal-grid>
               {FAQ_QUICK_CARDS.map(({ title, text }) => (
                 <div className="faqs-quick__card" data-reveal key={title}>
-                  <h3>{title}</h3>
+                  <h2>{title}</h2>
                   <p>{text}</p>
                 </div>
               ))}

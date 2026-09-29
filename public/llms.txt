@@ -1,0 +1,23 @@
+# Mirevuno AI
+
+> Mirevuno AI is an AI-powered online trading platform for Australians, uniting crypto and traditional markets with automated market analysis, bank-grade security and 24/7 access. This file helps language models and AI agents understand the site's structure.
+
+## Core pages
+
+- [Home](https://mirevuno-ai.com/): Platform overview, stats, benefits, security features, community testimonials, FAQs and the registration form.
+- [About Us](https://mirevuno-ai.com/about-us): Company story, purpose, values and platform capabilities.
+- [Contact Us](https://mirevuno-ai.com/contact-us): Support contact details, email address and the enquiry form.
+- [FAQs](https://mirevuno-ai.com/faqs): Frequently asked questions covering fees, security, withdrawals, trading experience and supported markets.
+
+## Legal pages
+
+- [Privacy Policy](https://mirevuno-ai.com/privacy-policy): How personal information is collected, used and protected.
+- [Terms of Use](https://mirevuno-ai.com/terms-of-use): The rules governing use of the website and trading platform.
+- [Risk Disclosure](https://mirevuno-ai.com/risk-disclosure): Trading risk warnings, volatility, leverage and no-advice disclaimers.
+
+## Key facts
+
+- Minimum deposit: 347 A$
+- Markets: cryptocurrencies (BTC, ETH, SOL, USDT and more), forex, shares, commodities, precious metals and CFDs
+- Security: 256-bit SSL encryption, 98% of funds in offline cold storage, two-step login verification and 24/7 activity monitoring
+- Support email: support@mirevuno-ai.com

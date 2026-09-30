@@ -87,24 +87,16 @@
         rel="stylesheet"
       />
     </noscript>
-    <!-- Google tag (gtag.js) - deferred until page load so analytics
-         never competes with first paint on slow mobile connections -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTV4SX2VDY"></script>
     <script>
-      function loadGtag() {
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YTV4SX2VDY';
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-YTV4SX2VDY');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-      if (document.readyState === 'complete') loadGtag();
-      else window.addEventListener('load', loadGtag);
+      gtag('js', new Date());
+
+      gtag('config', 'G-YTV4SX2VDY');
     </script>
   </head>
   <body>

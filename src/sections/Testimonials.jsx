@@ -90,7 +90,7 @@ export default function Testimonials() {
         <div className="section-head" data-reveal>
           <span className="eyebrow">Success stories</span>
           <h2>Stories from our community</h2>
-          <p>Verified feedback from Mirevuno AI members across Australia.</p>
+          <p>Verified feedback from Mirevuno AI members around the world.</p>
         </div>
 
         <div
@@ -127,7 +127,7 @@ export default function Testimonials() {
                   </span>
                   <div>
                     <div className="testimonial__name">{name}</div>
-                    <div className="testimonial__loc">{location}, Australia</div>
+                    <div className="testimonial__loc">{location}</div>
                   </div>
                   <span className="testimonial__return">{returnPct}</span>
                 </div>

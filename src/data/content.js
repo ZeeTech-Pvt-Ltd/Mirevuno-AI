@@ -133,7 +133,7 @@ export const STEPS = [
 export const TESTIMONIALS = [
   {
     name: 'Marcus D.',
-    location: 'Sydney',
+    location: 'London, United Kingdom',
     avatar: '/assets/img/avatars/avatar-1.jpg',
     returnPct: '+17.9%',
     quote:
@@ -141,7 +141,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Priya N.',
-    location: 'Melbourne',
+    location: 'Toronto, Canada',
     avatar: '/assets/img/avatars/avatar-2.jpg',
     returnPct: '+16.4%',
     quote:
@@ -149,7 +149,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Jack T.',
-    location: 'Brisbane',
+    location: 'Singapore',
     avatar: '/assets/img/avatars/avatar-3.jpg',
     returnPct: '+18.7%',
     quote:
@@ -157,7 +157,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Amelia S.',
-    location: 'Perth',
+    location: 'Auckland, New Zealand',
     avatar: '/assets/img/avatars/avatar-4.jpg',
     returnPct: '+15.1%',
     quote:
@@ -165,7 +165,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Noah K.',
-    location: 'Adelaide',
+    location: 'Dubai, United Arab Emirates',
     avatar: '/assets/img/avatars/avatar-5.jpg',
     returnPct: '+17.2%',
     quote:
@@ -173,7 +173,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Isabella F.',
-    location: 'Gold Coast',
+    location: 'Los Angeles, United States',
     avatar: '/assets/img/avatars/avatar-6.jpg',
     returnPct: '+16.9%',
     quote:

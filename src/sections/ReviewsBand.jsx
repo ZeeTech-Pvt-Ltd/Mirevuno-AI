@@ -18,7 +18,7 @@ export default function ReviewsBand() {
               </span>
               <span className="rating__score">{RATING.score}/5</span>
               <span style={{ fontSize: 14, color: 'var(--on-dark-muted)' }}>
-                {RATING.reviews} reviews from Australian traders
+                {RATING.reviews} reviews from traders worldwide
               </span>
             </div>
 

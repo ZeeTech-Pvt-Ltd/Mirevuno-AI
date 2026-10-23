@@ -11,9 +11,9 @@ import {
 
 export default function AboutUs() {
   useMeta({
-    title: 'About Mirevuno AI - AI-Powered Crypto Trading Platform',
+    title: 'About Mirevuno AI - Our Story and Platform',
     description:
-      'About Mirevuno AI - our story, purpose, team and the transparency and controls behind the platform.',
+      'About Mirevuno AI - our story, our purpose and the transparency and controls behind the platform.',
     canonical: `${SITE_URL}/about-us`,
   })
 
@@ -33,12 +33,12 @@ export default function AboutUs() {
               About us
             </span>
             <h1>
-              Smart, automated crypto trading with{' '}
+              Smart, automated crypto trading, powered by{' '}
               <span className="gradient-text">Mirevuno AI</span>
             </h1>
             <p className="hero__sub">
-              Mirevuno AI supports market analysis, helping you assess opportunities, respond
-              efficiently and invest with greater transparency.
+              Mirevuno AI backs your market analysis, helping you weigh up opportunities, act
+              efficiently and invest with clearer transparency.
             </p>
             <div className="about-hero__actions">
               <Link to="/#register" className="btn btn--amber">
@@ -70,11 +70,11 @@ export default function AboutUs() {
       <section className="section section--tint">
         <div className="container">
           <div className="section-head" data-reveal>
-            <span className="eyebrow">What we offer</span>
-            <h2>Technology, security and personalised support</h2>
+            <span className="eyebrow">What you get</span>
+            <h2>Technology, security and support that feels personal</h2>
             <p>
-              Our platform pairs automated market analysis with support resources to help you make
-              better-informed decisions.
+              The platform combines automated market analysis with support resources, so your
+              decisions rest on better information.
             </p>
           </div>
           <div className="about-feature-list" data-reveal-grid>
@@ -101,7 +101,7 @@ export default function AboutUs() {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="eyebrow">Our story</span>
-            <h2>From a simple idea to a platform built around accessible crypto trading</h2>
+            <h2>How a simple idea grew into a platform built around accessible crypto trading</h2>
           </div>
           <div className="story-grid" data-reveal-grid>
             {STORY_STEPS.map(({ title, text }, i) => (
@@ -122,7 +122,7 @@ export default function AboutUs() {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="eyebrow">Our purpose</span>
-            <h2>What we believe and why we created Mirevuno AI</h2>
+            <h2>What we stand for and why Mirevuno AI exists</h2>
           </div>
           <div className="about-values-grid" data-reveal-grid>
             {VALUES.map(({ title, text, icon }) => (
@@ -138,16 +138,17 @@ export default function AboutUs() {
           <div className="about-longterm" data-reveal>
             <strong>Think long term</strong>
             <p>
-              We are not chasing short-term wins. Mirevuno AI is built to support ongoing trading
-              through stable technology, consistent service and continuous platform development.
+              We are not chasing quick wins. Mirevuno AI exists to support trading over the long
+              haul - through stable technology, dependable service and continuous platform
+              development.
             </p>
           </div>
 
           <p className="about-closing" data-reveal>
-            Whatever your experience level, Mirevuno AI is designed to help Australians trade with
-            clarity. From your first crypto purchase to a diversified portfolio across forex,
-            shares and commodities, the platform brings analysis, execution and account controls
-            together in one place - so you can focus on the decisions that matter.
+            Whatever your level of experience, Mirevuno AI is built to help Australians trade with
+            clarity. From a first crypto purchase to a diversified portfolio spanning forex,
+            shares and commodities, the platform unites analysis, execution and account controls
+            in one place - leaving you free to focus on the decisions that matter.
           </p>
         </div>
       </section>

@@ -21,11 +21,11 @@ export const NAV_LINKS = [
 ]
 
 export const STATS = [
-  { value: '4m+', label: 'Members across the globe' },
-  { value: '98+', label: 'Countries with access' },
-  { value: '65+', label: 'Currencies available' },
-  { value: '24/7', label: 'Round-the-clock trading' },
-  { value: '$500m+', label: 'In deposits handled' },
+  { value: '4m+', label: 'Registered members worldwide' },
+  { value: '98+', label: 'Countries served' },
+  { value: '65+', label: 'Currencies supported' },
+  { value: '24/7', label: 'Trading around the clock' },
+  { value: '$500m+', label: 'In deposits processed' },
 ]
 
 // Partner logo wall renders public/assets/img/svg/partner-1..8.svg
@@ -33,100 +33,100 @@ export const STATS = [
 
 export const ABOUT_CARDS = [
   {
-    title: 'Analysis That Thinks Ahead',
-    text: 'A built-in analysis engine watches global markets around the clock and surfaces the setups worth a second look.',
+    title: 'Analysis That Works Ahead of You',
+    text: 'An integrated analysis engine keeps watch over global markets 24/7 and brings forward the opportunities that deserve your attention.',
     icon: 'chip',
   },
   {
-    title: 'Orders Filled in a Flash',
-    text: 'The moment you confirm a trade, your order goes through - no queues, no lag, no waiting around.',
+    title: 'Orders Executed in a Flash',
+    text: 'Confirm a trade and it goes through immediately - no queues, no delays, no sitting around waiting for a fill.',
     icon: 'bolt',
   },
   {
-    title: 'A Dashboard Built for People',
-    text: 'Your balance, performance and history in one tidy view, designed for everyday users rather than trading desks.',
+    title: 'A Dashboard That Makes Sense',
+    text: 'Balances, results and history in one clean overview - designed for everyday people, not professional trading desks.',
     icon: 'gauge',
   },
 ]
 
 export const BENEFITS = [
   {
-    title: 'Beginner-Friendly by Design',
-    text: 'You don’t need a finance background. The platform guides you from your first login all the way to your first trade.',
+    title: 'Made for First-Timers',
+    text: 'No finance background needed. Step-by-step guidance takes you from signing up through to placing your very first trade.',
     icon: 'smile',
   },
   {
-    title: 'Compliance Comes First',
-    text: 'Mirevuno AI operates with a firm commitment to the regulatory standards Australian users rightly expect.',
+    title: 'Compliance You Can Count On',
+    text: 'Mirevuno AI holds itself to the regulatory standards Australian users are entitled to expect.',
     icon: 'shield',
   },
   {
-    title: 'Start With a Modest Deposit',
-    text: 'Open an account and begin with as little as 347 A$ - a gentle way to test the waters.',
+    title: 'A Gentle Starting Point',
+    text: 'Create an account and get going from just 347 A$ - an easy, low-pressure way to dip a toe in.',
     icon: 'coins',
   },
   {
-    title: 'Fees You Can See',
-    text: 'Every charge is laid out before you commit to anything. What you see on screen is exactly what you pay.',
+    title: 'Every Fee on Display',
+    text: 'All costs are shown upfront, before you commit to anything. The price on screen is exactly what you pay.',
     icon: 'receipt',
   },
   {
-    title: 'Markets Never Sleep',
-    text: 'Markets move at all hours - and with Mirevuno AI, so can you, from any device, wherever you are.',
+    title: 'Trade Whenever You Like',
+    text: 'Markets are active around the clock - and with Mirevuno AI you can be too, from any device and any location.',
     icon: 'clock',
   },
   {
-    title: 'Help Around the Corner',
-    text: 'A friendly, Australia-based support team is on hand whenever a question comes up.',
+    title: 'Support Just a Message Away',
+    text: 'A friendly, Australia-based support team is ready whenever a question pops up.',
     icon: 'headset',
   },
 ]
 
 export const SECURITY_FEATURES = [
   {
-    title: 'Bank-Grade Data Encryption',
-    text: 'Every connection to our servers is shielded with 256-bit SSL encryption - the same protection the banks rely on.',
+    title: 'Bank-Strength Encryption',
+    text: 'All traffic to our servers travels under 256-bit SSL encryption - the same standard the banks rely on.',
     icon: 'lock',
   },
   {
-    title: 'Offline Asset Storage',
-    text: 'The overwhelming majority of funds - 98% - sit in cold storage, kept fully disconnected from the internet.',
+    title: 'Funds Kept Offline',
+    text: 'The vast share of funds - 98% - is held in cold storage, kept completely disconnected from the internet.',
     icon: 'vault',
   },
   {
-    title: 'Two-Step Login Protection',
-    text: 'Layer an extra verification step onto every sign-in so your account remains yours alone.',
+    title: 'Two-Factor Sign-In',
+    text: 'Add a second verification layer to every login so your account stays yours alone.',
     icon: 'key',
   },
   {
-    title: '24/7 Activity Monitoring',
-    text: 'Automated systems keep watch over every account around the clock and flag anything out of the ordinary.',
+    title: 'Constant Activity Oversight',
+    text: 'Automated monitoring watches every account at all hours and raises the alarm on anything unusual.',
     icon: 'eye',
   },
   {
-    title: 'Unreadable Passwords',
-    text: 'Credentials are stored using one-way hashing - not even our own team can ever see your password.',
+    title: 'Passwords No One Can Read',
+    text: 'Logins are stored as one-way hashes - even our own staff can never view your password.',
     icon: 'fingerprint',
   },
   {
-    title: 'Hardened Infrastructure',
-    text: 'The platform runs on audited, battle-tested technology already trusted by millions worldwide.',
+    title: 'Battle-Tested Infrastructure',
+    text: 'The platform runs on audited, hardened technology already relied on by millions across the world.',
     icon: 'server',
   },
 ]
 
 export const STEPS = [
   {
-    title: 'Create Your Account',
-    text: 'Set up your free account in minutes - all we need is your name, email and phone number.',
+    title: 'Open Your Account',
+    text: 'Your free account is ready in minutes - all we ask for is your name, email and phone number.',
   },
   {
-    title: 'Add Funds',
-    text: 'Top up with 347 A$ or more using a card, bank transfer or e-wallet.',
+    title: 'Make a Deposit',
+    text: 'Add 347 A$ or more by card, bank transfer or e-wallet.',
   },
   {
-    title: 'Begin Trading',
-    text: 'Trade BTC, SOL, USDT and more - manually, or with automation switched on.',
+    title: 'Start Trading',
+    text: 'Trade BTC, SOL, USDT and beyond - by hand, or with the automation switched on.',
   },
 ]
 
@@ -137,7 +137,7 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-1.jpg',
     returnPct: '+17.9%',
     quote:
-      'I walked in knowing nothing about markets. The platform held my hand through every step, and within weeks I had a routine I could rely on.',
+      'I arrived with zero market knowledge. The platform guided me through every stage, and within weeks I had settled into a routine I can count on.',
   },
   {
     name: 'Priya N.',
@@ -145,7 +145,7 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-2.jpg',
     returnPct: '+16.4%',
     quote:
-      'The interface feels more like my banking app than trading software. Funding, trading, withdrawing - all of it simply works.',
+      'It feels closer to my banking app than to trading software. Deposits, trades, withdrawals - everything simply works.',
   },
   {
     name: 'Jack T.',
@@ -153,7 +153,7 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-3.jpg',
     returnPct: '+18.7%',
     quote:
-      'The AI engine keeps surfacing chances I would never spot myself. It works quietly in the background while I focus on my day job.',
+      'The AI engine keeps finding opportunities I would never spot on my own. It hums along in the background while I get on with my day job.',
   },
   {
     name: 'Amelia S.',
@@ -161,7 +161,7 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-4.jpg',
     returnPct: '+15.1%',
     quote:
-      'Transparency won me over. Every fee is shown before I commit, and when I call support, a real person picks up.',
+      'The openness sold me. Fees appear before I confirm anything, and support calls are answered by an actual human.',
   },
   {
     name: 'Noah K.',
@@ -169,7 +169,7 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-5.jpg',
     returnPct: '+17.2%',
     quote:
-      'I started with the minimum deposit just to dip a toe in. Six months on, it has become a steady part of my month.',
+      'I began with the smallest deposit, just to test the water. Six months later it is a regular part of my month.',
   },
   {
     name: 'Isabella F.',
@@ -177,41 +177,41 @@ export const TESTIMONIALS = [
     avatar: '/assets/img/avatars/avatar-6.jpg',
     returnPct: '+16.9%',
     quote:
-      'Round-the-clock access suits my life perfectly. I check my phone over morning coffee and let automation handle the rest.',
+      '24/7 access fits my lifestyle exactly. I glance at my phone over morning coffee and leave the rest to automation.',
   },
 ]
 
 export const BAND_QUOTES = [
   {
-    quote: 'Opened an account on a Tuesday, closed my first trade by Friday. Genuinely impressed.',
+    quote: 'Signed up on a Tuesday and had my first trade closed by Friday. Honestly impressed.',
     author: 'Daniel K. - Sydney',
   },
 ]
 
 export const FAQS = [
   {
-    q: 'How do I begin with Mirevuno AI?',
-    a: 'Create a free account, add funds, and you can start right away. Trade on your own terms, or turn on the built-in AI engine that scans the markets and acts on the settings you pick. Your money and your settings stay under your control at all times.',
+    q: 'How do I get started with Mirevuno AI?',
+    a: 'Open a free account, deposit funds and you can begin straight away. Trade on your own terms, or switch on the built-in AI engine, which scans the markets and acts on the settings you choose. Your money and your settings remain under your control at all times.',
   },
   {
-    q: 'How is my money kept safe?',
-    a: 'Several safeguards work together: 256-bit SSL encryption on every connection, 98% of funds held in offline cold storage, two-step sign-in verification, and round-the-clock monitoring for unusual activity. Passwords are stored through one-way hashing, so nobody - including our staff - can ever read them.',
+    q: 'How is my money protected?',
+    a: 'A series of defences works side by side: 256-bit SSL encryption on every connection, 98% of funds held in offline cold storage, two-step login verification and 24/7 monitoring for unusual activity. Passwords are kept as one-way hashes, so no one - our staff included - can ever read them.',
   },
   {
-    q: 'How quickly can I withdraw my funds?',
-    a: 'You can request a withdrawal from your dashboard at any time. Most requests are completed within 24–48 hours, and funds are returned to the payment method you originally used where possible.',
+    q: 'How fast can I withdraw my funds?',
+    a: 'Withdrawals can be requested from your dashboard whenever you like. Most are completed within 24–48 hours, and where possible funds go back to the payment method you originally used.',
   },
   {
-    q: 'Are there any hidden fees?',
-    a: 'None. Any cost attached to a transaction is shown to you clearly before you confirm it. If a fee applies, you will see the exact amount first - every single time.',
+    q: 'Will I be surprised by hidden fees?',
+    a: 'Never. Any cost linked to a transaction is shown clearly before you confirm it. When a fee applies, you will see the exact figure beforehand - every single time.',
   },
   {
-    q: 'Do I need any experience to get started?',
-    a: 'Not at all. The interface was designed for first-timers, the minimum deposit is just 347 A$, and the AI engine plus built-in guides help you build confidence step by step.',
+    q: 'Do I need experience to begin?',
+    a: 'None at all. The interface was built for newcomers, the minimum deposit is only 347 A$, and the AI engine together with in-platform guides builds your confidence step by step.',
   },
   {
-    q: 'Which markets can I trade?',
-    a: 'You can trade across a broad range of instruments from one account, including shares, currencies (forex), commodities, precious metals, CFDs and cryptocurrencies.',
+    q: 'Which markets are available to trade?',
+    a: 'One account opens the door to a wide set of instruments - shares, forex, commodities, precious metals, CFDs and cryptocurrencies.',
   },
 ]
 
@@ -224,54 +224,54 @@ export const RATING = {
 // site's /faq page (quick answers + full question list).
 export const FAQS_PAGE = [
   {
-    q: 'What is Mirevuno AI and how does it work?',
-    a: 'Mirevuno AI is an AI-supported trading platform that runs continuously - scanning markets, spotting potential opportunities and placing trades automatically based on the settings you choose. You can use automated trade management or switch to manual mode whenever you like.',
+    q: 'What is Mirevuno AI, and how does it work?',
+    a: 'Mirevuno AI is an AI-assisted trading platform that operates around the clock - scanning markets, flagging possible opportunities and executing trades automatically according to the settings you select. Run it on autopilot or flip to manual mode at any time.',
   },
   {
-    q: 'How does Mirevuno AI keep my funds and data secure?',
-    a: 'Security is built into every layer of the platform. Your personal data is protected with recognised encryption and account authentication, and financial transactions go through established payment providers. Your trades, signals and balance updates are shown clearly so you can always see what is happening on your account.',
+    q: 'How does Mirevuno AI protect my funds and data?',
+    a: 'Security sits in every layer of the platform. Personal data is safeguarded with recognised encryption and account authentication, and transactions run through established payment providers. Trades, signals and balance changes are displayed clearly, so your account activity is always visible.',
   },
   {
-    q: 'Can I request a withdrawal at any time?',
-    a: 'Yes - you can request a withdrawal whenever you like, subject to account checks, available funds and your payment provider’s processing requirements. Your balance stays visible at all times, and processing times may vary by provider.',
+    q: 'Can I withdraw at any time?',
+    a: 'Yes - requests can be made whenever you choose, subject to account checks, available funds and your payment provider’s processing rules. Your balance remains visible at all times; processing times vary by provider.',
   },
   {
-    q: 'Are there any fees or costs?',
-    a: 'Any fee information is displayed clearly before you proceed. There is no registration fee, though other charges may apply depending on the service or payment method. To get started you’ll need a minimum deposit of 347 A$ - payment methods may include credit cards, bank transfers and PayPal.',
+    q: 'What fees or costs apply?',
+    a: 'Fee details appear clearly before you go ahead. Registration costs nothing, though other charges may apply depending on the service or payment method. Starting requires a minimum deposit of 347 A$ - options may include credit cards, bank transfers and PayPal.',
   },
   {
-    q: 'Do I need experience to start?',
-    a: 'No. The platform is designed for newcomers and experienced traders alike. In automated mode, the AI handles market scanning, signal generation and trade execution based on your settings - or switch to manual mode whenever you want full control.',
+    q: 'Is prior experience required?',
+    a: 'No. It suits first-time users and seasoned traders equally. In automated mode the AI takes care of market scanning, signal generation and trade execution based on your settings - or switch to manual whenever you want full control.',
   },
   {
-    q: 'Do I need to monitor the platform constantly?',
-    a: 'No. Mirevuno AI can continuously analyse live charts, trends and patterns, reducing the need for constant monitoring. The automated system manages activity based on your chosen settings, though it’s still wise to review your account regularly.',
+    q: 'Do I have to watch the platform all day?',
+    a: 'No. Mirevuno AI can keep analysing live charts, trends and patterns without interruption, cutting the need for constant oversight. The automated system manages activity according to your chosen settings - though a regular glance at your account is still wise.',
   },
   {
-    q: 'What can I trade?',
-    a: 'Mirevuno AI gives you access to a range of markets, which may include cryptocurrencies such as Bitcoin and Ethereum, forex, shares, commodities, precious metals and CFDs.',
+    q: 'What markets can I trade?',
+    a: 'Mirevuno AI opens up a range of markets, potentially including cryptocurrencies such as Bitcoin and Ethereum, plus forex, shares, commodities, precious metals and CFDs.',
   },
   {
-    q: 'How do I contact support?',
-    a: 'You can reach our support team any time from the Contact Us page, or email us directly at support@mirevuno-ai.com. We’re happy to help with questions about your account, deposits, withdrawals or the platform itself.',
+    q: 'How do I reach support?',
+    a: 'Reach the support team any time via the Contact Us page, or email support@mirevuno-ai.com directly. We are glad to assist with anything from accounts and deposits to withdrawals and the platform itself.',
   },
 ]
 
 // About Us page - original phrasing, modeled on the reference /about page.
 export const ABOUT_FEATURES = [
   {
-    title: 'AI-powered market analysis',
-    text: 'Automated analysis and trade management tools help you make better-informed decisions.',
+    title: 'AI-driven market analysis',
+    text: 'Automated analysis and trade-management tools support more confident, better-informed decisions.',
     icon: 'chip',
   },
   {
-    title: 'Clear account controls',
-    text: 'Encryption safeguards and straightforward account settings help protect your information.',
+    title: 'Straightforward account controls',
+    text: 'Encryption safeguards and simple account settings help keep your information protected.',
     icon: 'shield',
   },
   {
-    title: 'Support when you need it',
-    text: 'Friendly help with account and platform questions, whenever you need it.',
+    title: 'Help whenever you need it',
+    text: 'Friendly assistance with account and platform questions, exactly when you need it.',
     icon: 'headset',
   },
 ]
@@ -279,45 +279,45 @@ export const ABOUT_FEATURES = [
 export const STORY_STEPS = [
   {
     title: 'Getting started',
-    text: 'A fintech team set out to make crypto trading simpler to understand and manage.',
+    text: 'A fintech team set out to make crypto trading easier to understand and handle.',
   },
   {
     title: 'First launch',
-    text: 'The platform launched with a carefully selected range of cryptocurrencies and a streamlined account experience.',
+    text: 'The platform went live with a hand-picked set of cryptocurrencies and a streamlined account journey.',
   },
   {
     title: 'Building our community',
-    text: 'As interest grew, we kept refining the platform and the support experience.',
+    text: 'As interest grew, we kept sharpening both the platform and the support experience.',
   },
   {
     title: 'Expanding access',
-    text: 'Availability now extends across multiple markets, with payment options and security controls varying by region.',
+    text: 'Availability now spans multiple markets, with payment options and security controls varying by region.',
   },
   {
     title: 'Today',
-    text: 'Account management, market analysis and automated trade management come together in one place.',
+    text: 'Account management, market analysis and automated trade management meet in a single place.',
   },
 ]
 
 export const VALUES = [
   {
     title: 'Accessibility',
-    text: 'Making crypto trading tools easier to access, understand and manage.',
+    text: 'Crypto trading tools that are simpler to reach, grasp and manage.',
     icon: 'gauge',
   },
   {
     title: 'Transparency',
-    text: 'Clear account controls, honest platform information and straightforward user journeys.',
+    text: 'Clear account controls, honest platform information and uncomplicated user journeys.',
     icon: 'eye',
   },
   {
     title: 'Innovation',
-    text: 'AI-supported tools that help you analyse markets and manage trading activity.',
+    text: 'AI-supported tools that aid market analysis and the management of trading activity.',
     icon: 'chip',
   },
   {
     title: 'Responsibility',
-    text: 'Clear service standards and honest risk communication, helping you make informed trading decisions.',
+    text: 'Clear service standards and candid risk communication, so you can trade with your eyes open.',
     icon: 'shield',
   },
 ]
@@ -325,14 +325,14 @@ export const VALUES = [
 export const FAQ_QUICK_CARDS = [
   {
     title: 'New to trading?',
-    text: 'The AI-powered tools can handle selected tasks automatically, while you stay in control of every setting.',
+    text: 'The AI-powered tools can take selected tasks off your hands automatically - while every setting stays under your control.',
   },
   {
     title: 'Questions about your funds?',
-    text: 'Withdraw from your available balance whenever you like - any charges and transaction details are shown before you confirm.',
+    text: 'Withdraw from your available balance whenever you like - charges and transaction details appear before you confirm.',
   },
   {
     title: 'Unsure what to trade?',
-    text: 'Let the AI analyse selected markets - including Bitcoin, Ethereum, forex, shares and commodities - and flag opportunities for you.',
+    text: 'Let the AI scan selected markets - Bitcoin, Ethereum, forex, shares and commodities among them - and surface opportunities for you.',
   },
 ]

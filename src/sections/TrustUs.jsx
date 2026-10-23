@@ -6,7 +6,7 @@ export default function TrustUs() {
       <div className="container">
         <div className="section-head" data-reveal>
           <span className="eyebrow">Trusted by</span>
-          <h2>Trusted by the trading community</h2>
+          <h2>Trusted across the trading community</h2>
         </div>
       </div>
 

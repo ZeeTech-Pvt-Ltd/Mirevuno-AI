@@ -6,8 +6,8 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-head" data-reveal>
           <span className="eyebrow">How it works</span>
-          <h2>Three steps to your first trade</h2>
-          <p>From sign-up to the markets in three easy steps.</p>
+          <h2>Your first trade in three steps</h2>
+          <p>From sign-up to the markets in three simple steps.</p>
         </div>
 
         <div className="steps" data-reveal-grid>

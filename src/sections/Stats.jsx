@@ -5,8 +5,8 @@ export default function Stats() {
     <section className="section section--tight">
       <div className="container">
         <div className="section-head" data-reveal>
-          <span className="eyebrow">At a glance</span>
-          <h2>Mirevuno AI by the numbers</h2>
+          <span className="eyebrow">By the numbers</span>
+          <h2>The numbers behind Mirevuno AI</h2>
         </div>
         <div className="stats" data-reveal>
           {STATS.map(({ value, label }) => (

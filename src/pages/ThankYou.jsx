@@ -7,7 +7,7 @@ export default function ThankYou() {
   useMeta({
     title: 'Thank You for Registering - Mirevuno AI',
     canonical: `${SITE_URL}/thank-you`,
-    description: 'Thank you for registering with Mirevuno AI. Our team will contact you shortly.',
+    description: 'Thanks for registering with Mirevuno AI. Our team will be in touch shortly.',
   })
 
   return (
@@ -22,8 +22,8 @@ export default function ThankYou() {
           Thank <span className="gradient-text">You!</span>
         </h1>
         <p className="thank-you__sub">
-          Your registration has been received. Our team will contact you shortly to get you
-          started.
+          Your registration has landed safely. A member of our team will be in touch shortly to
+          get you started.
         </p>
         <div className="thank-you__actions">
           <Link to="/" className="btn btn--amber">

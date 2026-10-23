@@ -5,10 +5,10 @@ import { FAQS_PAGE, FAQ_QUICK_CARDS, SITE_URL } from '../data/content'
 
 export default function Faqs() {
   useMeta({
-    title: 'Mirevuno AI FAQs - Fees, Security & How It Works',
+    title: 'Mirevuno AI FAQs - Fees, Security & Getting Started',
     canonical: `${SITE_URL}/faqs`,
     description:
-      'Mirevuno AI frequently asked questions - how the platform works, security, withdrawals, fees, and more.',
+      'Mirevuno AI frequently asked questions - how the platform works, security, withdrawals, fees and more.',
   })
 
   const faqSchema = {
@@ -41,10 +41,10 @@ export default function Faqs() {
               Mirevuno AI <span className="gradient-text">FAQs</span>
             </h1>
             <p className="hero__sub">
-              Whether you are getting started, managing your portfolio or need help with your
-              account, we can answer common platform questions. Mirevuno AI is built for
-              Australian traders - from first-time users exploring crypto to experienced investors
-              managing a diversified portfolio.
+              Whether you are just starting out, managing a portfolio or need account help, the
+              answers to common platform questions are here. Mirevuno AI is built for Australian
+              traders - from newcomers exploring crypto to seasoned investors running a
+              diversified portfolio.
             </p>
 
             <div className="faqs-quick" data-reveal-grid>
@@ -65,7 +65,7 @@ export default function Faqs() {
           <div className="section-head" data-reveal>
             <span className="eyebrow">FAQ</span>
             <h2>Frequently asked questions</h2>
-            <p>Everything you need to know about trading with Mirevuno AI.</p>
+            <p>Everything you need to know before trading with Mirevuno AI.</p>
           </div>
 
           <FaqList items={FAQS_PAGE} />
@@ -75,8 +75,8 @@ export default function Faqs() {
       {/* Bottom CTA */}
       <section className="section section--tight">
         <div className="container faqs-cta" data-reveal>
-          <h2>Can&apos;t find what you&apos;re looking for?</h2>
-          <p>Our team is ready to help with anything else you need.</p>
+          <h2>Can&apos;t find the answer you need?</h2>
+          <p>Our team is on hand for anything else you&apos;d like to ask.</p>
           <Link to="/contact-us" className="btn btn--amber">
             Contact Us
           </Link>

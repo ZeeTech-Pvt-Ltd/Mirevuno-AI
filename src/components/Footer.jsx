@@ -38,8 +38,8 @@ export default function Footer() {
           <div className="site-footer__brand">
             <Logo />
             <p>
-              {BRAND} is an online trading platform built for Australians - bringing together a
-              broad range of markets with tools designed to make trading accessible to everyone.
+              {BRAND} is an online trading platform created for Australians - uniting a broad
+              range of markets with tools designed to make trading accessible to all.
             </p>
             <div className="site-footer__contact">
               <span>Contact us:</span>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           <div className="site-footer__cta">
             <h2>Get started</h2>
-            <p>Open a free account and start trading with a minimum deposit of 347 A$.</p>
+            <p>Open a free account and begin trading from a minimum deposit of 347 A$.</p>
             <a href="#register" className="btn btn--amber" onClick={handleRegister}>
               Register
             </a>
@@ -80,15 +80,15 @@ export default function Footer() {
 
         <p className="site-footer__risk">
           Risk Disclosure: Trading financial markets carries substantial risk and is not suitable
-          for everyone. Prices can fall as quickly as they rise, and you may lose some or all of
-          your invested capital. Past performance does not guarantee future results. This website
-          provides general information only and does not constitute financial advice. Always do
-          your own research and consider seeking independent professional advice before trading.
+          for everyone. Prices can fall as fast as they climb, and you may lose some or all of
+          your invested capital. Past performance is no guarantee of future results. This website
+          offers general information only and is not financial advice. Always do your own research
+          and consider seeking independent professional advice before trading.
         </p>
 
         <div className="site-footer__bottom">
           <span>© 2026 {BRAND}. All rights reserved.</span>
-          <span>Trading carries risk. Invest only what you can afford to lose.</span>
+          <span>Trading carries risk. Never invest more than you can afford to lose.</span>
         </div>
       </div>
     </footer>

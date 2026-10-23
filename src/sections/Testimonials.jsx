@@ -88,9 +88,9 @@ export default function Testimonials() {
     <section className="section section--tint">
       <div className="container">
         <div className="section-head" data-reveal>
-          <span className="eyebrow">Success stories</span>
-          <h2>Stories from our community</h2>
-          <p>Verified feedback from Mirevuno AI members around the world.</p>
+          <span className="eyebrow">Member stories</span>
+          <h2>Voices from our community</h2>
+          <p>Verified feedback from Mirevuno AI members across the globe.</p>
         </div>
 
         <div
@@ -115,7 +115,7 @@ export default function Testimonials() {
                   </span>
                   <span className="testimonial__badge">
                     <Icon name="check" size={13} strokeWidth={2.5} />
-                    Confirmed user
+                    Verified user
                   </span>
                 </div>
 

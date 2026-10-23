@@ -14,11 +14,11 @@ export default function Security() {
         <div className="security-split">
           <div className="security-panel" data-reveal>
             <h2>
-              Security woven into <span className="accent">everything we do</span>
+              Security built into <span className="accent">everything we do</span>
             </h2>
             <p>
-              Your account and your capital sit behind several independent layers of protection,
-              around the clock.
+              Your account and your capital rest behind several independent layers of protection,
+              day and night.
             </p>
             <div className="security-panel__chips">
               {SECURITY_CHIPS.map(({ value, label }) => (

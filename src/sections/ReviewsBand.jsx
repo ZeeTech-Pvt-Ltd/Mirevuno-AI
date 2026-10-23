@@ -8,7 +8,7 @@ export default function ReviewsBand() {
       <div className="container">
         <div className="band" data-reveal>
           <div className="band__inner">
-            <h2>Loved by a growing community</h2>
+            <h2>Loved by an ever-growing community</h2>
 
             <div className="band__rating">
               <span className="rating__stars" aria-hidden="true">
@@ -18,7 +18,7 @@ export default function ReviewsBand() {
               </span>
               <span className="rating__score">{RATING.score}/5</span>
               <span style={{ fontSize: 14, color: 'var(--on-dark-muted)' }}>
-                {RATING.reviews} reviews from traders worldwide
+                {RATING.reviews} reviews from traders around the world
               </span>
             </div>
 

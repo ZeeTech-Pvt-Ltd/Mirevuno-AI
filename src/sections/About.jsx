@@ -8,19 +8,19 @@ export default function About() {
         <div className="about-split">
           <div className="about-split__lead" data-reveal>
             <span className="eyebrow">About the platform</span>
-            <h2>Meet the Mirevuno AI platform</h2>
+            <h2>Get to know the Mirevuno AI platform</h2>
             <p>
-              Mirevuno AI is an online trading platform created for Australian users. It gathers a
-              broad range of markets into one place, with tools that do the heavy lifting so you
-              can focus on the decisions that matter.
+              Mirevuno AI is an online trading platform designed for Australians. It pulls a wide
+              range of markets into a single space, with tools that carry the heavy lifting so you
+              can concentrate on the decisions that count.
             </p>
             <div className="about-split__cta">
               <a className="btn btn--violet" href="#register">
-                Create your account
+                Open your account
               </a>
               <span className="chip">
                 <Icon name="coins" size={17} />
-                Start with just 347 A$
+                Start from just 347 A$
               </span>
             </div>
           </div>

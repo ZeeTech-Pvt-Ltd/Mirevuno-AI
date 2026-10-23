@@ -7,11 +7,11 @@ export default function Benefits() {
     <section className="section" id="benefits">
       <div className="container">
         <div className="section-head" data-reveal>
-          <span className="eyebrow">Why trade</span>
-          <h2>Why traders choose Mirevuno AI</h2>
+          <span className="eyebrow">The advantage</span>
+          <h2>Why traders pick Mirevuno AI</h2>
           <p>
-            Every part of the experience is shaped to remove the hurdles that keep people out of
-            the markets.
+            Every part of the experience is built to clear away the obstacles that keep people on
+            the sidelines.
           </p>
         </div>
 

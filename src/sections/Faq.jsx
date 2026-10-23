@@ -10,9 +10,9 @@ export default function Faq() {
           <div className="faq-split__lead" data-reveal>
             <span className="eyebrow">FAQ</span>
             <h2>Frequently asked questions</h2>
-            <p>Answers to the questions we hear most often from new and existing members.</p>
+            <p>Straight answers to the questions new and existing members ask most.</p>
             <Link to="/faqs" className="btn btn--ghost">
-              Visit all FAQs
+              See all FAQs
             </Link>
           </div>
 

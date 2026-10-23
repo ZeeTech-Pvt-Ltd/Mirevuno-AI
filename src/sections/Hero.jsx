@@ -2,7 +2,7 @@ import Icon from '../components/Icon'
 import RegistrationForm from '../components/RegistrationForm'
 import { RATING } from '../data/content'
 
-const HIGHLIGHTS = ['AI-driven market analysis', 'Orders in an instant', 'Trading around the clock']
+const HIGHLIGHTS = ['AI-powered market insight', 'Instant order execution', 'Round-the-clock trading']
 
 export default function Hero() {
   return (
@@ -13,11 +13,11 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div>
-          <h1>Mirevuno AI - See the Market with Clarity</h1>
+          <h1>Mirevuno AI - See the Markets Clearly</h1>
 
           <p className="hero__sub">
-            A modern trading platform designed for Australians - uniting crypto and traditional
-            markets with tools that make trading feel effortless.
+            A modern trading platform created for Australians - one place where crypto and
+            traditional markets meet, with tools that make trading feel almost effortless.
           </p>
 
           <div className="hero__points">
@@ -36,7 +36,7 @@ export default function Hero() {
               ))}
             </span>
             <span className="rating__score">{RATING.score}/5</span>
-            <span style={{ fontSize: 14 }}>based on {RATING.reviews} reviews</span>
+            <span style={{ fontSize: 14 }}>from {RATING.reviews} reviews</span>
           </div>
         </div>
 
@@ -47,13 +47,13 @@ export default function Hero() {
           </span>
           <span className="hero-float hero-float--2" aria-hidden="true">
             <Icon name="shield" size={16} />
-            AU Verified · Secure sign-up
+            AU Verified · Secure registration
           </span>
 
           <RegistrationForm
             idPrefix="hero"
-            title="Create your free account"
-            subtitle="Join over 4 million members and be trading within minutes."
+            title="Open your free account"
+            subtitle="Join 4 million+ members and place your first trade within minutes."
           />
         </div>
       </div>

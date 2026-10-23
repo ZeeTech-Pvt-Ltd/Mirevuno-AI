@@ -118,7 +118,7 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
     return (
       <div className="form-card" data-reveal>
         <div className="form-success" role="status">
-          Thank you! Your registration has been received. Our team will contact you shortly.
+          Thanks! Your registration has been received. Our team will be in touch shortly.
         </div>
       </div>
     )
@@ -209,22 +209,22 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
           />
           <span>
             I agree to the <a href="/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a> and
-            understand how my data will be used. *
+            understand how my information will be used. *
           </span>
         </label>
 
         {status === STATUS.error && (
           <div className="form-error" role="alert">
-            Something went wrong. Please try again shortly.
+            Something went wrong on our end. Please try again in a moment.
           </div>
         )}
 
         <button className="btn btn--amber btn--block" type="submit" disabled={status === STATUS.loading}>
-          {status === STATUS.loading ? 'Submitting…' : 'Open an account'}
+          {status === STATUS.loading ? 'Submitting…' : 'Create my account'}
         </button>
         <p className="form-trust">
           <Icon name="lock" size={13} strokeWidth={2.2} />
-          Your data is protected with 256-bit SSL encryption
+          Your details are protected with 256-bit SSL encryption
         </p>
       </form>
 

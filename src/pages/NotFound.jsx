@@ -4,7 +4,7 @@ import useMeta from '../hooks/useMeta'
 export default function NotFound() {
   useMeta({
     title: 'Page Not Found - Mirevuno AI',
-    description: "The page you're looking for doesn't exist. Head back to the Mirevuno AI homepage.",
+    description: "The page you're after doesn't exist. Head back to the Mirevuno AI homepage.",
   })
 
   return (
@@ -19,8 +19,8 @@ export default function NotFound() {
           Page <span className="gradient-text">Not Found</span>
         </h1>
         <p className="thank-you__sub">
-          The page you&apos;re looking for doesn&apos;t exist or has been moved. Let&apos;s get
-          you back on track.
+          The page you&apos;re after doesn&apos;t exist or has moved. Let&apos;s get you back on
+          track.
         </p>
         <div className="thank-you__actions">
           <Link to="/" className="btn btn--amber">

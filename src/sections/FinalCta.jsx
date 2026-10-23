@@ -8,11 +8,11 @@ export default function FinalCta() {
         <div className="cta-final" data-reveal>
           <div>
             <h2>
-              Ready to start your <span className="accent">trading journey?</span>
+              Ready to begin your <span className="accent">trading journey?</span>
             </h2>
             <p className="cta-final__sub">
-              Join 4m+ members already trading with Mirevuno AI. Opening your free account takes
-              minutes - no experience needed.
+              Join the 4m+ members already trading with Mirevuno AI. Opening a free account takes
+              minutes - and no experience is required.
             </p>
 
             <div className="cta-final__actions">

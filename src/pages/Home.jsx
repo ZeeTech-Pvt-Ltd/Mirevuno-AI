@@ -14,9 +14,9 @@ import FinalCta from '../sections/FinalCta'
 
 export default function Home() {
   useMeta({
-    title: 'Mirevuno AI - Official AI-Powered Trading Platform Australia',
+    title: 'Mirevuno AI - Official AI Trading Platform for Australia',
     description:
-      "Mirevuno AI - Australia's online trading platform. Trade crypto, forex, equities and more with AI-powered analysis and 24/7 access.",
+      "Mirevuno AI - Australia's online trading platform. Trade crypto, forex, shares and more with AI-powered analysis and round-the-clock access.",
     canonical: `${SITE_URL}/`,
   })
   return (

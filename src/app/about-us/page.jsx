@@ -1,22 +1,21 @@
-import { Link } from 'react-router-dom'
-import Icon from '../components/Icon'
-import useMeta from '../hooks/useMeta'
+import Link from 'next/link'
+import Icon from '../../components/Icon'
 import {
   ABOUT_FEATURES,
   STATS,
   STORY_STEPS,
-  SITE_URL,
   VALUES,
-} from '../data/content'
+} from '../../data/content'
+import { pageMeta } from '../../lib/meta'
+
+export const metadata = pageMeta({
+  title: 'About Mirevuno AI - Our Story and Platform',
+  description:
+    'About Mirevuno AI - our story, our purpose and the transparency and controls behind the platform.',
+  path: '/about-us',
+})
 
 export default function AboutUs() {
-  useMeta({
-    title: 'About Mirevuno AI - Our Story and Platform',
-    description:
-      'About Mirevuno AI - our story, our purpose and the transparency and controls behind the platform.',
-    canonical: `${SITE_URL}/about-us`,
-  })
-
   return (
     <main>
       {/* Hero - centered, gradient headline */}
@@ -41,10 +40,10 @@ export default function AboutUs() {
               efficiently and invest with clearer transparency.
             </p>
             <div className="about-hero__actions">
-              <Link to="/#register" className="btn btn--amber">
+              <Link href="/#register" className="btn btn--amber">
                 Register
               </Link>
-              <Link to="/contact-us" className="btn btn--ghost">
+              <Link href="/contact-us" className="btn btn--ghost">
                 Contact us
               </Link>
             </div>

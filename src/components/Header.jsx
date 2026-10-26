@@ -1,29 +1,46 @@
+'use client'
+
 import { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import Logo from './Logo'
 import { NAV_LINKS } from '../data/content'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  const navigate = useNavigate()
-  const { pathname } = useLocation()
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const scrollToAnchor = (id) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      return true
+    }
+    return false
+  }
 
   // Anchor items target sections on the home page; when navigating from
-  // another route, go home first and then scroll.
+  // another route, go home first, then poll until the section renders.
   const handleAnchor = (e, href) => {
     e.preventDefault()
     const id = href.slice(1)
     if (pathname === '/') {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      navigate('/')
-      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 150)
+      scrollToAnchor(id)
+      return
     }
+    router.push('/')
+    let attempts = 0
+    const tryScroll = () => {
+      if (scrollToAnchor(id)) return
+      if (attempts++ < 20) setTimeout(tryScroll, 100)
+    }
+    setTimeout(tryScroll, 150)
   }
 
   const renderItem = (item) =>
     item.to ? (
-      <Link key={item.label} to={item.to} onClick={() => setOpen(false)}>
+      <Link key={item.label} href={item.to} onClick={() => setOpen(false)}>
         {item.label}
       </Link>
     ) : (
@@ -63,7 +80,7 @@ export default function Header() {
         <nav className="container site-header__mobile" aria-label="Mobile navigation">
           {NAV_LINKS.map((item) =>
             item.to ? (
-              <Link key={item.label} to={item.to} onClick={() => setOpen(false)}>
+              <Link key={item.label} href={item.to} onClick={() => setOpen(false)}>
                 {item.label}
               </Link>
             ) : (

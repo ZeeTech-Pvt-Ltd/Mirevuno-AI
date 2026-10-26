@@ -1,16 +1,16 @@
-import Icon from '../components/Icon'
-import RegistrationForm from '../components/RegistrationForm'
-import useMeta from '../hooks/useMeta'
-import { CONTACT_EMAIL, SITE_URL } from '../data/content'
+import Icon from '../../components/Icon'
+import RegistrationForm from '../../components/RegistrationForm'
+import { CONTACT_EMAIL } from '../../data/content'
+import { pageMeta } from '../../lib/meta'
+
+export const metadata = pageMeta({
+  title: 'Contact Mirevuno AI - Support & Assistance',
+  description:
+    'Contact Mirevuno AI - platform questions, technical help or collaboration enquiries. Our team is ready to assist.',
+  path: '/contact-us',
+})
 
 export default function Contact() {
-  useMeta({
-    title: 'Contact Mirevuno AI - Support & Assistance',
-    canonical: `${SITE_URL}/contact-us`,
-    description:
-      'Contact Mirevuno AI - platform questions, technical help or collaboration enquiries. Our team is ready to assist.',
-  })
-
   return (
     <main className="section">
       <div className="container contact__inner">

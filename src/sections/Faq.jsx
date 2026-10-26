@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import FaqList from '../components/FaqList'
 import { FAQS } from '../data/content'
 
@@ -11,7 +11,7 @@ export default function Faq() {
             <span className="eyebrow">FAQ</span>
             <h2>Frequently asked questions</h2>
             <p>Straight answers to the questions new and existing members ask most.</p>
-            <Link to="/faqs" className="btn btn--ghost">
+            <Link href="/faqs" className="btn btn--ghost">
               See all FAQs
             </Link>
           </div>

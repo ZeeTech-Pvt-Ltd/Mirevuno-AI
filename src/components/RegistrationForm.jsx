@@ -1,6 +1,8 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import 'intl-tel-input/styles'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import Icon from './Icon'
 import { FORM_ENDPOINT, OFFER_NAME } from '../data/content'
 
@@ -18,7 +20,7 @@ const initialFields = { firstName: '', lastName: '', email: '', consent: true }
  *   phone in full international format
  */
 export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, payRow = true }) {
-  const navigate = useNavigate()
+  const router = useRouter()
   const [fields, setFields] = useState(initialFields)
   const [status, setStatus] = useState(STATUS.idle)
   const [phoneError, setPhoneError] = useState('')
@@ -107,7 +109,7 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
       setStatus(STATUS.success)
       setFields(initialFields)
       iti?.setNumber('')
-      navigate('/thank-you')
+      router.push('/thank-you')
     } catch {
       // Endpoint rate-limits to 3 attempts / 5 min per IP.
       setStatus(STATUS.error)
@@ -208,7 +210,7 @@ export default function RegistrationForm({ idPrefix = 'reg', title, subtitle, pa
             required
           />
           <span>
-            I agree to the <a href="/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a> and
+            I agree to the <Link href="/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</Link> and
             understand how my information will be used. *
           </span>
         </label>

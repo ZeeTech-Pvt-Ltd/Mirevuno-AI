@@ -1,12 +1,6 @@
-import { Link } from 'react-router-dom'
-import useMeta from '../hooks/useMeta'
+import Link from 'next/link'
 
 export default function NotFound() {
-  useMeta({
-    title: 'Page Not Found - Mirevuno AI',
-    description: "The page you're after doesn't exist. Head back to the Mirevuno AI homepage.",
-  })
-
   return (
     <main className="hero not-found">
       <div className="hero__blob hero__blob--1" aria-hidden="true" />
@@ -23,10 +17,10 @@ export default function NotFound() {
           track.
         </p>
         <div className="thank-you__actions">
-          <Link to="/" className="btn btn--amber">
+          <Link href="/" className="btn btn--amber">
             Back to Home
           </Link>
-          <Link to="/contact-us" className="btn btn--ghost">
+          <Link href="/contact-us" className="btn btn--ghost">
             Contact Us
           </Link>
         </div>

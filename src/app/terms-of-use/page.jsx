@@ -1,12 +1,16 @@
-import LegalPage, { LegalSection, ContactNote } from '../components/LegalPage'
+import LegalPage, { LegalSection, ContactNote } from '../../components/LegalPage'
+import { pageMeta } from '../../lib/meta'
+
+export const metadata = pageMeta({
+  title: 'Terms of Use - Mirevuno AI | Trading Platform Rules',
+  description:
+    'Mirevuno AI Terms of Use - the rules that govern your use of our website and trading platform.',
+  path: '/terms-of-use',
+})
 
 export default function TermsOfUse() {
   return (
-    <LegalPage
-      title="Terms of Use"
-      description="Mirevuno AI Terms of Use - the rules that govern your use of our website and trading platform."
-      updated="1 August 2026"
-    >
+    <LegalPage title="Terms of Use" updated="1 August 2026">
       <LegalSection heading="1. Acceptance of Terms">
         <p>
           By accessing or using the Mirevuno AI website and platform, you agree to be bound by

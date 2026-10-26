@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 // Closing conversion panel on the violet gradient, above the footer.
 export default function FinalCta() {
@@ -19,7 +19,7 @@ export default function FinalCta() {
               <a className="btn btn--amber" href="#register">
                 Register
               </a>
-              <Link to="/contact-us" className="btn btn--ghost-dark">
+              <Link href="/contact-us" className="btn btn--ghost-dark">
                 Contact Us
               </Link>
             </div>

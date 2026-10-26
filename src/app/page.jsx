@@ -1,5 +1,3 @@
-import useMeta from '../hooks/useMeta'
-import { SITE_URL } from '../data/content'
 import Hero from '../sections/Hero'
 import Stats from '../sections/Stats'
 import TrustUs from '../sections/TrustUs'
@@ -11,14 +9,16 @@ import HowItWorks from '../sections/HowItWorks'
 import Testimonials from '../sections/Testimonials'
 import Faq from '../sections/Faq'
 import FinalCta from '../sections/FinalCta'
+import { pageMeta } from '../lib/meta'
+
+export const metadata = pageMeta({
+  title: 'Mirevuno AI - Official AI Trading Platform for Australia',
+  description:
+    "Mirevuno AI - Australia's online trading platform. Trade crypto, forex, shares and more with AI-powered analysis and round-the-clock access.",
+  path: '/',
+})
 
 export default function Home() {
-  useMeta({
-    title: 'Mirevuno AI - Official AI Trading Platform for Australia',
-    description:
-      "Mirevuno AI - Australia's online trading platform. Trade crypto, forex, shares and more with AI-powered analysis and round-the-clock access.",
-    canonical: `${SITE_URL}/`,
-  })
   return (
     <main>
       <Hero />

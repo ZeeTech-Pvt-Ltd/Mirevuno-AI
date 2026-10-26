@@ -1,4 +1,7 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import Logo from './Logo'
 import { BRAND, CONTACT_EMAIL } from '../data/content'
 
@@ -16,19 +19,29 @@ const LEGAL_LINKS = [
 ]
 
 export default function Footer() {
-  const navigate = useNavigate()
-  const { pathname } = useLocation()
+  const router = useRouter()
+  const pathname = usePathname()
 
   // Scroll to the registration form; when navigating from another route,
-  // go home first and then scroll (mirrors the header's anchor handling).
+  // go home first, then poll until the form renders (mirrors the header's
+  // anchor handling).
   const handleRegister = (e) => {
     e.preventDefault()
     if (pathname === '/') {
       document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      navigate('/')
-      setTimeout(() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' }), 150)
+      return
     }
+    router.push('/')
+    let attempts = 0
+    const tryScroll = () => {
+      const el = document.getElementById('register')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+        return
+      }
+      if (attempts++ < 20) setTimeout(tryScroll, 100)
+    }
+    setTimeout(tryScroll, 150)
   }
 
   return (
@@ -52,7 +65,7 @@ export default function Footer() {
             <ul>
               {PLATFORM_LINKS.map(({ label, to }) => (
                 <li key={to}>
-                  <Link to={to}>{label}</Link>
+                  <Link href={to}>{label}</Link>
                 </li>
               ))}
             </ul>
@@ -63,7 +76,7 @@ export default function Footer() {
             <ul>
               {LEGAL_LINKS.map(({ label, to }) => (
                 <li key={to}>
-                  <Link to={to}>{label}</Link>
+                  <Link href={to}>{label}</Link>
                 </li>
               ))}
             </ul>
